@@ -1,0 +1,317 @@
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-color: #292929;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color:antiquewhite;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.menuBtn{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    text-decoration: none;
+}
+
+.menuBtn:hover{
+    color: blanchedalmond;
+}
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+@media screen and (max-width:767px) {
+    .navTrigger {
+        display: block;
+    }
+    body{
+        width: 100%;
+    }
+    .nav{
+        margin: 0;
+        width: 100%;
+    }
+    .nav div.logo {
+        display: none;
+    }
+    .container{
+        margin: 0;
+        padding: 0;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+    .menuBtn{
+        color: black;
+        position: absolute;
+        left: 0;
+        width: 20%;
+        
+    }
+    
+}
+
+
+/* Global */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Navbar - Progress Bar */
+.navbar1 {
+  position: fixed;
+  top: 45%;
+  left: 3em;
+  height: 175px;
+  z-index: 1;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar--increment {
+  background-color: #E74C5B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  border-radius: 5px;
+}
+
+.progress-bar--circle {
+  position: absolute;
+  bottom: 5px;
+  left: -21px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.1s;
+}
+
+.progress-bar--circle.active {
+  background-color: #E74C5B;
+}
+
+.navbar1 ul {
+    padding: 0 1em;
+    list-style: none;
+}
+
+.navbar1 ul li {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.navbar1 ul li a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    transition: all 0.1s;
+}
+
+.active {
+ color: #E74C5B !important;
+}
+
+/* Main */
+header {
+  width: 100%;
+  height: 500px;
+}
+
+header h1, article h2, footer h3{
+    position: relative;
+    top: 50%;
+    font-size: 4em;
+    text-align: center;
+}
+
+article {
+    border: 1px solid white;
+    width: 100%;
+    height: 500px;
+}
+
+footer {
+    height: 500px;
+    width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .navbar1{
+        display: none;
+    }
+  
+    
+}
+
+.header{
+    background-image: url(./308986727.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+#article-1{
+    background-color: #292929;
+    border: none;
+}
+#article-2{
+    background-color: #f3ead9;
+    border:none;
+}
+
+.box{
+    
+    width: 40%;
+    height: auto;
+    background-color: #fff;
+    
+}
+.box > img{
+    width: 100%;
+    
+}
+#bottom{background-color: #f3ead9;}
+.inline { 
+    float: right;
+    margin-top: 8%;
+ }
+.pg{
+    margin-top: 20%; width: 30%;
+    font-size: 40px;
+}
+@media screen and (max-width:767px) {
+    .box{
+        width: 70%;
+    }
+    #bottom{
+        font-size: 10px;
+    }
+    .inline{
+        margin-top: 8%;
+    }
+
+     .pg{
+        
+        width: 100%;
+    }
+
+}
+.hidden{
+    display: none;
+}
+
+
+
+p{
+    text-align: center;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #0074D9;
+  }
+  
+  .underline{
+    position: relative;
+  }
+  
+  .underline::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0074D9;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    .underline:hover::before{
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+   
+  }
+
+  

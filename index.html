@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>B&B Sunrise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="./main.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+</style>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="./index.html"> <img src="./Bed & Breakfast.png" alt="" style="width: 40px; height: auto;"> B&BSunrise</a>
+        </div>
+       
+        <a href="javascript:void(0)" class=" menuBtn"  onclick="openNav()">☰</a>
+       
+       
+        <div class="overlay" id="myNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="./index.html">Home</a>
+              <a href="./struttura.html">Struttura</a>
+              <a href="./camera.html">Camera</a>
+              <a href="./contatti.html">Contatti</a>
+            </div>
+          </div>
+
+    </div>
+</nav>
+   
+      <!-- Overlay content -->
+
+
+
+    
+
+    
+        <div class="pic-ctn home">
+            <img src="./308986727.jpg" alt="" class="pic">
+            <img src="./308986728.jpg" alt="" class="pic">
+            <img src="./308986735.jpg" alt="" class="pic">
+            <img src="./308986736.jpg" alt="" class="pic">
+            <img src="./308986771.jpg" alt="" class="pic">
+          </div>
+    <div style="height: 1000px; padding-top: 10%;">
+        <!-- just to make scrolling effect possible -->
+        <!-- <div style=" width: 50%; padding-top: 25%;">
+            <img src="./Bed & Breakfast.png" alt="" style="float: left; margin-top: 0px;" >
+            <h1 class="w3-jumbo"><b>Sunrise</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Bed & Breakfast</b></h1>
+        </div> -->
+			<div class="photoContainer">
+                  <img src="./308986727.jpg" alt="Snow" >
+                  <img src="./308986735.jpg" alt="Forest" >
+                  <img src="./308986736.jpg" alt="Mountains" >
+            </div>
+
+            <div>
+                <div style=" width: 50%; margin: 0 auto;">
+                    <img src="./Bed & Breakfast.png" alt="" style="float: left; margin-top: 0px;" >
+                    <h1 class="w3-jumbo"><b>Sunrise</b></h1>
+                    <h1 class="w3-xxxlarge w3-text-red"><b>Bed & Breakfast</b></h1>
+                </div>
+                <br><br>
+                <h3 class="myH2">Storia della struttura</h3>
+                <p class="myP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti aut ea nostrum? Odio illum ipsa facilis numquam sapiente, labore debitis inventore maxime voluptates mollitia error odit quidem cupiditate, commodi blanditiis.</p>
+            </div>
+
+            <div>
+                <h3 class="myH2"> Naviga nel nostro sito <i></i> </h3>
+                <div class="content" id="cards">
+                    <!-- card -->
+                    <a href="./struttura.html" class="card">
+                      <div class="card">
+                        <div class="icon"><i class="fa fa-home"></i></div>
+                        <p class="title">Struttura</p>
+                        <p class="text">Clicca per scoprire di più sulla nostra struttura</p>
+                      </div>
+                    </a>
+                    
+                    <!-- end card -->
+                    <!-- card -->
+                    <a href="./camera.html" class="card">
+                      <div class="card">
+                        <div class="icon"><i class="fa fa-bed"></i></div>
+                        <p class="title">Camera</p>
+                        <p class="text">Scopri di più sulla camera</p>
+                      </div>
+                    </a>
+                    
+                    <!-- end card -->
+                    <!-- card -->
+                    <a href="./contatti.html" class="card">
+                      <div class="card">
+                        <div class="icon"><i class="material-icons md-36">alternate_email</i></div>
+                        <p class="title">Contatti</p>
+                        <p class="text">Contattaci per saperne di più</p>   
+                      </div>
+                    </a>
+                    <!-- end card -->
+                 </div>
+            </div>
+    </div>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+        $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#nav").toggleClass("hidden").addClass("w3-animate-opacity")
+    
+
+});
+
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+  $("#cards").toggleClass("content").addClass("hidden");
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+   $("#cards").toggleClass("hidden").addClass("content");
+
+}
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+    </html>
