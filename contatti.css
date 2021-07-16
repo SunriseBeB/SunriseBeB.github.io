@@ -326,7 +326,7 @@ body {
   /* Flip card - covering both the front and inside front page */
   
   /* An outer container to hold the flip card. This excludes the inside page */
-  .flip-card {
+  .flip-card :active{
     height: 15rem;
     perspective: 100rem;
     position: absolute;
@@ -345,7 +345,7 @@ body {
   }
   
   /* An inner container to hold the flip card. This excludes the inside page */
-  .flip-card__container {
+  .flip-card__container:active {
     height: 100%;
     position: absolute;
     right: 0;
