@@ -202,8 +202,8 @@ body {
     padding: .7rem .75rem;
     position: relative;
     text-decoration: none;
-    transition: all .3s ease;
     -webkit-transition: all .3s ease;
+    transition: all .3s ease;
     width: 90%;
     z-index: 10;
   }
@@ -214,9 +214,10 @@ body {
     left: 0;
     position: absolute;
     top: 0;
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
-    transition: all .3s ease;
     -webkit-transition: all .3s ease;
+    transition: all .3s ease;
     width: 100%;
     z-index: -1;
   }
@@ -317,6 +318,7 @@ body {
     box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
     height: 15rem;
     position: relative;
+    -webkit-transition: all 1s ease;
     transition: all 1s ease;
     width: 15rem;
   }
@@ -329,8 +331,8 @@ body {
     perspective: 100rem;
     position: absolute;
     right: 0;
-    transition: all 1s ease;
     -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     visibility: hidden;
     width: 15rem;
     z-index: 100;
@@ -347,10 +349,12 @@ body {
     height: 100%;
     position: absolute;
     right: 0;
+    -webkit-transform-origin: left;
     transform-origin: left;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    transition: all 1s ease;
     -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     width: 100%;
   }
   
@@ -427,6 +431,7 @@ body {
   
   .card-back {
     background-color: #fafbfa;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
   }
   
@@ -448,6 +453,7 @@ body {
     padding: 1rem;
     position: absolute;
     right: 0;
+    -webkit-transition: all 1s ease;
     transition: all 1s ease;
     width: 15rem;
     z-index: 1;
@@ -473,6 +479,7 @@ body {
   
   /* When the card is hovered, the flip card container will rotate */
   .card:hover .flip-card__container {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
   }
   
