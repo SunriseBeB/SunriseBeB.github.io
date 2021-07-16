@@ -478,7 +478,7 @@ body {
   }
   
   /* When the card is hovered, the flip card container will rotate */
-  .card:active .flip-card__container {
+  .card:focus .flip-card__container {
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
   }
