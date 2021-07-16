@@ -332,7 +332,7 @@ body {
     position: absolute;
     right: 0;
     -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
     visibility: hidden;
     width: 15rem;
     z-index: 100;
