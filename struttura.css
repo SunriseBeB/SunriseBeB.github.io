@@ -179,6 +179,7 @@
     padding: 18px 8%;
     background-color: white;
     overflow-y: scroll;
+    -webkit-transition: 0.8s ease;
     transition: 0.8s ease;
     width: 100%;
   }
