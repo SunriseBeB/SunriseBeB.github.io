@@ -276,6 +276,9 @@ body {
        padding-top: 250px;
        flex-direction: column;
     }
+    .photoContainer{
+      padding-top: 30%;
+    }
   
  }
  
